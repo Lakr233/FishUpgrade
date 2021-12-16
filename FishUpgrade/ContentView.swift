@@ -80,7 +80,7 @@ struct ContentView: View {
             Group {
                 HStack {
                     Image(systemName: "timer")
-                    Text("摸鱼时常")
+                    Text("摸鱼时长")
                     Spacer()
                     Text(makeTimeIntervalString())
                 }
@@ -112,7 +112,7 @@ struct ContentView: View {
                             openFishWindow(withDuration: upgradeDuration * 60)
                         }
                     } label: {
-                        Text("开始摸鱼！")
+                        Text("一键摸鱼")
                     }
                     .padding()
                     Spacer()
