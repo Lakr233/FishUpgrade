@@ -37,19 +37,18 @@ struct FishView: View {
         GeometryReader { r in
             ZStack {
                 VStack(spacing: 0) {
+                    Spacer()
+                        .frame(width: 200, height: 80)
                     Image(systemName: "applelogo")
                         .antialiased(true)
                         .foregroundColor(Color.white)
                         .aspectRatio(contentMode: .fit)
                         .font(.system(size: 72))
-                    Spacer()
-                        .frame(width: 200, height: 35)
+                        .padding(.bottom, 100)
                     progress
                     Spacer()
                         .frame(width: 200, height: 10)
                     tintLabel
-                    Spacer()
-                        .frame(width: 200, height: 10)
                 }
             }
             .frame(
@@ -79,21 +78,23 @@ struct FishView: View {
         .frame(minWidth: 600, minHeight: 400)
     }
 
+    let progressBarSize: CGSize = .init(width: 250, height: 5)
+    
     var progress: some View {
         Rectangle()
             .foregroundColor(Color.gray.opacity(0.5))
-            .frame(width: 200, height: 4)
+            .frame(width: progressBarSize.width, height: progressBarSize.height)
             .overlay(
                 HStack(spacing: 0) {
                     Rectangle()
                         .foregroundColor(Color.white)
-                        .frame(width: 200 * percentage, height: 4)
+                        .frame(width: progressBarSize.width * percentage, height: progressBarSize.height)
                         .background(Text("\(reloadTrigger ? 1 : 0)").hidden())
                     Spacer()
                 }
             )
             .clipped()
-            .cornerRadius(2)
+            .cornerRadius(progressBarSize.height / 2)
     }
 
     var tintLabel: some View {
