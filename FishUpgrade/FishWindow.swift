@@ -143,15 +143,17 @@ struct FishView: View {
 extension View {
     func openFishWindow(withDuration: Double) {
         #if !SANDBOX
-            (NSApp.delegate as? AppDelegate)?.doNotDisturbEnabled = DoNotDisturb.isEnabled
+            AppDelegate.doNotDisturbEnabled = DoNotDisturb.isEnabled
             DoNotDisturb.isEnabled = true
         #endif
         let controller = NSHostingController(rootView: FishView(duration: withDuration))
         let window = NSWindow(contentViewController: controller)
         window.title = ""
+        window.styleMask = [.resizable, .titled, .fullSizeContentView]
         window.titlebarAppearsTransparent = true
         window.contentViewController = controller
         window.makeKeyAndOrderFront(nil)
-        window.toggleFullScreen(true)
+        window.toggleFullScreen(nil)
+        AppDelegate.showBlankWindows(for: window)
     }
 }

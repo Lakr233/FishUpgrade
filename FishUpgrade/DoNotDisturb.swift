@@ -8,7 +8,7 @@
 import AuxiliaryExecute
 import Cocoa
 
-public enum DoNotDisturb {
+enum DoNotDisturb {
     private static let appId = "com.apple.notificationcenterui" as CFString
 
     private static func set(_ key: String, value: CFPropertyList?) {
@@ -87,9 +87,9 @@ public enum DoNotDisturb {
         set {
             if #available(macOS 12.0, *) {
                 if newValue {
-                    _ = AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< on", timeout: 3.0)
+                    AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< on", timeout: 3.0)
                 } else {
-                    _ = AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< off", timeout: 3.0)
+                    AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< off", timeout: 3.0)
                 }
             } else {
                 if newValue {

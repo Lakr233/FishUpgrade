@@ -17,6 +17,8 @@
 		0F5DBE2E276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */; };
 		0F5DBE2F276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */; };
 		0F5DBE37276C55F10003BDA2 /* AuxiliaryExecute in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5DBE36276C55F10003BDA2 /* AuxiliaryExecute */; };
+		0FF99B40276C6687007A2B7A /* BlankWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF99B3F276C6687007A2B7A /* BlankWindow.swift */; };
+		0FF99B41276C6687007A2B7A /* BlankWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF99B3F276C6687007A2B7A /* BlankWindow.swift */; };
 		508215A1276B901200D3A252 /* FishWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508215A0276B901200D3A252 /* FishWindow.swift */; };
 		50CBC2E1276B94B0009733FF /* NoSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBC2E0276B94B0009733FF /* NoSleep.swift */; };
 		50D76E7E276B7C06007EF640 /* FishUpgradeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D76E7D276B7C06007EF640 /* FishUpgradeApp.swift */; };
@@ -30,6 +32,7 @@
 		0F5DBE2B276C51500003BDA2 /* FishUpgradeStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishUpgradeStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5DBE2C276C52080003BDA2 /* FishUpgradeStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FishUpgradeStore.entitlements; sourceTree = "<group>"; };
 		0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */ = {isa = PBXFileReference; lastKnownFileType = file; path = "macos-focus-mode.shortcut"; sourceTree = "<group>"; };
+		0FF99B3F276C6687007A2B7A /* BlankWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankWindow.swift; sourceTree = "<group>"; };
 		508215A0276B901200D3A252 /* FishWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishWindow.swift; sourceTree = "<group>"; };
 		50CBC2E0276B94B0009733FF /* NoSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSleep.swift; sourceTree = "<group>"; };
 		50D76E7A276B7C06007EF640 /* FishUpgrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishUpgrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +93,7 @@
 				50D76E7D276B7C06007EF640 /* FishUpgradeApp.swift */,
 				50D76E7F276B7C06007EF640 /* ContentView.swift */,
 				508215A0276B901200D3A252 /* FishWindow.swift */,
+				0FF99B3F276C6687007A2B7A /* BlankWindow.swift */,
 				50CBC2E0276B94B0009733FF /* NoSleep.swift */,
 				0F4A6DAC276BA4A30064FFEC /* DoNotDisturb.swift */,
 				50D76E81276B7C07007EF640 /* Assets.xcassets */,
@@ -217,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F5DBE20276C51500003BDA2 /* ContentView.swift in Sources */,
+				0FF99B41276C6687007A2B7A /* BlankWindow.swift in Sources */,
 				0F5DBE21276C51500003BDA2 /* FishUpgradeApp.swift in Sources */,
 				0F5DBE22276C51500003BDA2 /* NoSleep.swift in Sources */,
 				0F5DBE23276C51500003BDA2 /* FishWindow.swift in Sources */,
@@ -227,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FF99B40276C6687007A2B7A /* BlankWindow.swift in Sources */,
 				0F4A6DAD276BA4A30064FFEC /* DoNotDisturb.swift in Sources */,
 				50D76E80276B7C06007EF640 /* ContentView.swift in Sources */,
 				50D76E7E276B7C06007EF640 /* FishUpgradeApp.swift in Sources */,
@@ -246,7 +252,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -276,7 +282,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -421,7 +427,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -433,8 +439,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FishUpgrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,7 +457,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -464,8 +469,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FishUpgrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -10,15 +10,53 @@ import AppKit
 import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
+
+    private static weak var mainWindowToken: NSObjectProtocol?
+    private static var blankWindows: [BlankWindow]?
+
     func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
         true
     }
 
+    func applicationDidFinishLaunching(_ notification: Notification) {
+        AppDelegate.setupBlankWindows()
+    }
+
+    private static func setupBlankWindows() {
+        if NSScreen.screensHaveSeparateSpaces {
+            AppDelegate.blankWindows = NSScreen
+                .screens
+                .map { BlankWindow(in: $0) }
+        } else {
+            AppDelegate.blankWindows = []
+        }
+    }
+
+    private static func destroyBlankWindows() {
+
+    }
+
+    static func showBlankWindows(for mainWindow: NSWindow) {
+        mainWindowToken = NotificationCenter.default.addObserver(
+            forName: NSWindow.didExitFullScreenNotification,
+            object: mainWindow,
+            queue: .main) { noti in
+                // well... it is the best approach
+                exit(0)
+            }
+        blankWindows?.forEach { blank in
+            if blank.screen != mainWindow.screen {
+                blank.orderFront(nil)
+                blank.toggleFullScreen(nil)
+            }
+        }
+    }
+
     #if !SANDBOX
-        var doNotDisturbEnabled = false
+        static var doNotDisturbEnabled = false
 
         func applicationWillTerminate(_: Notification) {
-            DoNotDisturb.isEnabled = doNotDisturbEnabled
+            DoNotDisturb.isEnabled = AppDelegate.doNotDisturbEnabled
         }
     #endif
 }
