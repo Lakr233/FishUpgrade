@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AuxiliaryExecute",
+        "repositoryURL": "https://github.com/Co2333/AuxiliaryExecute.git",
+        "state": {
+          "branch": null,
+          "revision": "c78b507ca2f1410bb00ff08dfbdea12eed078fc1",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

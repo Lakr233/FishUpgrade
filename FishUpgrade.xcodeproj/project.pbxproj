@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4A6DAD276BA4A30064FFEC /* DoNotDisturb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4A6DAC276BA4A30064FFEC /* DoNotDisturb.swift */; };
+		0F5DBE20276C51500003BDA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D76E7F276B7C06007EF640 /* ContentView.swift */; };
+		0F5DBE21276C51500003BDA2 /* FishUpgradeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D76E7D276B7C06007EF640 /* FishUpgradeApp.swift */; };
+		0F5DBE22276C51500003BDA2 /* NoSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBC2E0276B94B0009733FF /* NoSleep.swift */; };
+		0F5DBE23276C51500003BDA2 /* FishWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508215A0276B901200D3A252 /* FishWindow.swift */; };
+		0F5DBE26276C51500003BDA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D76E84276B7C07007EF640 /* Preview Assets.xcassets */; };
+		0F5DBE27276C51500003BDA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D76E81276B7C07007EF640 /* Assets.xcassets */; };
+		0F5DBE2E276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */; };
+		0F5DBE2F276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */ = {isa = PBXBuildFile; fileRef = 0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */; };
+		0F5DBE37276C55F10003BDA2 /* AuxiliaryExecute in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5DBE36276C55F10003BDA2 /* AuxiliaryExecute */; };
 		508215A1276B901200D3A252 /* FishWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508215A0276B901200D3A252 /* FishWindow.swift */; };
 		50CBC2E1276B94B0009733FF /* NoSleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CBC2E0276B94B0009733FF /* NoSleep.swift */; };
 		50D76E7E276B7C06007EF640 /* FishUpgradeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D76E7D276B7C06007EF640 /* FishUpgradeApp.swift */; };
@@ -16,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F4A6DAC276BA4A30064FFEC /* DoNotDisturb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoNotDisturb.swift; sourceTree = "<group>"; };
+		0F5DBE2B276C51500003BDA2 /* FishUpgradeStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishUpgradeStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F5DBE2C276C52080003BDA2 /* FishUpgradeStore.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FishUpgradeStore.entitlements; sourceTree = "<group>"; };
+		0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */ = {isa = PBXFileReference; lastKnownFileType = file; path = "macos-focus-mode.shortcut"; sourceTree = "<group>"; };
 		508215A0276B901200D3A252 /* FishWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishWindow.swift; sourceTree = "<group>"; };
 		50CBC2E0276B94B0009733FF /* NoSleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSleep.swift; sourceTree = "<group>"; };
 		50D76E7A276B7C06007EF640 /* FishUpgrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FishUpgrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,21 +41,37 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		50D76E77276B7C06007EF640 /* Frameworks */ = {
+		0F5DBE24276C51500003BDA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		50D76E77276B7C06007EF640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5DBE37276C55F10003BDA2 /* AuxiliaryExecute in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F5DBE33276C55BA0003BDA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		50D76E71276B7C06007EF640 = {
 			isa = PBXGroup;
 			children = (
 				50D76E7C276B7C06007EF640 /* FishUpgrade */,
 				50D76E7B276B7C06007EF640 /* Products */,
+				0F5DBE33276C55BA0003BDA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				50D76E7A276B7C06007EF640 /* FishUpgrade.app */,
+				0F5DBE2B276C51500003BDA2 /* FishUpgradeStore.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +91,11 @@
 				50D76E7F276B7C06007EF640 /* ContentView.swift */,
 				508215A0276B901200D3A252 /* FishWindow.swift */,
 				50CBC2E0276B94B0009733FF /* NoSleep.swift */,
+				0F4A6DAC276BA4A30064FFEC /* DoNotDisturb.swift */,
 				50D76E81276B7C07007EF640 /* Assets.xcassets */,
 				50D76E86276B7C07007EF640 /* FishUpgrade.entitlements */,
+				0F5DBE2C276C52080003BDA2 /* FishUpgradeStore.entitlements */,
+				0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */,
 				50D76E83276B7C07007EF640 /* Preview Content */,
 			);
 			path = FishUpgrade;
@@ -78,6 +112,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0F5DBE1C276C51500003BDA2 /* FishUpgradeStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F5DBE28276C51500003BDA2 /* Build configuration list for PBXNativeTarget "FishUpgradeStore" */;
+			buildPhases = (
+				0F5DBE1D276C51500003BDA2 /* Sources */,
+				0F5DBE24276C51500003BDA2 /* Frameworks */,
+				0F5DBE25276C51500003BDA2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FishUpgradeStore;
+			packageProductDependencies = (
+			);
+			productName = FishUpgrade;
+			productReference = 0F5DBE2B276C51500003BDA2 /* FishUpgradeStore.app */;
+			productType = "com.apple.product-type.application";
+		};
 		50D76E79276B7C06007EF640 /* FishUpgrade */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50D76E89276B7C07007EF640 /* Build configuration list for PBXNativeTarget "FishUpgrade" */;
@@ -91,6 +144,9 @@
 			dependencies = (
 			);
 			name = FishUpgrade;
+			packageProductDependencies = (
+				0F5DBE36276C55F10003BDA2 /* AuxiliaryExecute */,
+			);
 			productName = FishUpgrade;
 			productReference = 50D76E7A276B7C06007EF640 /* FishUpgrade.app */;
 			productType = "com.apple.product-type.application";
@@ -119,21 +175,36 @@
 				Base,
 			);
 			mainGroup = 50D76E71276B7C06007EF640;
+			packageReferences = (
+				0F5DBE30276C55AB0003BDA2 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */,
+			);
 			productRefGroup = 50D76E7B276B7C06007EF640 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				50D76E79276B7C06007EF640 /* FishUpgrade */,
+				0F5DBE1C276C51500003BDA2 /* FishUpgradeStore */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0F5DBE25276C51500003BDA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5DBE26276C51500003BDA2 /* Preview Assets.xcassets in Resources */,
+				0F5DBE2F276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */,
+				0F5DBE27276C51500003BDA2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50D76E78276B7C06007EF640 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				50D76E85276B7C07007EF640 /* Preview Assets.xcassets in Resources */,
+				0F5DBE2E276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */,
 				50D76E82276B7C07007EF640 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +212,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0F5DBE1D276C51500003BDA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F5DBE20276C51500003BDA2 /* ContentView.swift in Sources */,
+				0F5DBE21276C51500003BDA2 /* FishUpgradeApp.swift in Sources */,
+				0F5DBE22276C51500003BDA2 /* NoSleep.swift in Sources */,
+				0F5DBE23276C51500003BDA2 /* FishWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		50D76E76276B7C06007EF640 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4A6DAD276BA4A30064FFEC /* DoNotDisturb.swift in Sources */,
 				50D76E80276B7C06007EF640 /* ContentView.swift in Sources */,
 				50D76E7E276B7C06007EF640 /* FishUpgradeApp.swift in Sources */,
 				50CBC2E1276B94B0009733FF /* NoSleep.swift in Sources */,
@@ -155,6 +238,66 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0F5DBE29276C51500003BDA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-D DEBUG -D SANDBOX";
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FishUpgrade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0F5DBE2A276C51500003BDA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-D SANDBOX";
+				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FishUpgrade;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		50D76E87276B7C07007EF640 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -206,7 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -261,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -275,12 +418,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FishUpgrade/FishUpgrade.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
-				DEVELOPMENT_TEAM = M4Z5DVY94F;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -292,6 +435,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = wiki.qaq.FishUpgrade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -304,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FishUpgrade/FishUpgrade.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -333,6 +477,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F5DBE28276C51500003BDA2 /* Build configuration list for PBXNativeTarget "FishUpgradeStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F5DBE29276C51500003BDA2 /* Debug */,
+				0F5DBE2A276C51500003BDA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50D76E75276B7C06007EF640 /* Build configuration list for PBXProject "FishUpgrade" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -352,6 +505,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0F5DBE30276C55AB0003BDA2 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Co2333/AuxiliaryExecute.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0F5DBE36276C55F10003BDA2 /* AuxiliaryExecute */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0F5DBE30276C55AB0003BDA2 /* XCRemoteSwiftPackageReference "AuxiliaryExecute" */;
+			productName = AuxiliaryExecute;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50D76E72276B7C06007EF640 /* Project object */;
 }

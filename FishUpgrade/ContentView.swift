@@ -42,7 +42,7 @@ struct ContentView: View {
         .overlay(
             VStack(spacing: 2) {
                 Spacer()
-                Text("Icon designed by Freepik from Flaticon, made with love by @Lakr233")
+                Text("Icon designed by Freepik from Flaticon, made with love by @Lakr233 and @82Flex")
                     .font(.system(size: 8, weight: .semibold, design: .rounded))
                     .multilineTextAlignment(.center)
                     .opacity(0.5)

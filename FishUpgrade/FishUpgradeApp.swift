@@ -3,18 +3,38 @@
 //  FishUpgrade
 //
 //  Created by Lakr Aream on 2021/12/16.
+//  Modified by Lessica <82flex@gmail.com> on 2021/12/17.
 //
 
+import AppKit
 import SwiftUI
+
+class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
+        true
+    }
+
+    #if !SANDBOX
+        var doNotDisturbEnabled = false
+
+        func applicationWillTerminate(_: Notification) {
+            DoNotDisturb.isEnabled = doNotDisturbEnabled
+        }
+    #endif
+}
 
 @main
 struct FishUpgradeApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     init() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            if isFullScreen() {
-                NSApplication.shared.keyWindow?.toggleFullScreen(nil)
+        #if !SANDBOX
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                if let keyWindow = NSApplication.shared.keyWindow {
+                    DoNotDisturb.installShortcutIfNeeded(in: keyWindow)
+                }
             }
-        }
+        #endif
     }
 
     var body: some Scene {
@@ -31,9 +51,4 @@ struct FishUpgradeApp: App {
             }
         }
     }
-}
-
-func isFullScreen() -> Bool {
-    // TODO: HERE
-    false
 }
