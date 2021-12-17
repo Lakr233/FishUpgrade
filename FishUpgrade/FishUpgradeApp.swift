@@ -32,17 +32,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    private static func destroyBlankWindows() {
-
-    }
-
     static func showBlankWindows(for mainWindow: NSWindow) {
         mainWindowToken = NotificationCenter.default.addObserver(
             forName: NSWindow.didExitFullScreenNotification,
             object: mainWindow,
             queue: .main) { noti in
                 // well... it is the best approach
-                exit(0)
+                NSApp.terminate(nil)
             }
         blankWindows?.forEach { blank in
             if blank.screen != mainWindow.screen {
