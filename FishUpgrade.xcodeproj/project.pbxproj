@@ -25,6 +25,9 @@
 		50D76E80276B7C06007EF640 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D76E7F276B7C06007EF640 /* ContentView.swift */; };
 		50D76E82276B7C07007EF640 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D76E81276B7C07007EF640 /* Assets.xcassets */; };
 		50D76E85276B7C07007EF640 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50D76E84276B7C07007EF640 /* Preview Assets.xcassets */; };
+		CCCC6CEB276C9C3D00E244DA /* enable_dnd_big_sur.sh in Resources */ = {isa = PBXBuildFile; fileRef = CCCC6CE9276C9C3D00E244DA /* enable_dnd_big_sur.sh */; };
+		CCCC6CEC276C9C3D00E244DA /* disable_dnd_big_sur.sh in Resources */ = {isa = PBXBuildFile; fileRef = CCCC6CEA276C9C3D00E244DA /* disable_dnd_big_sur.sh */; };
+		CCCC6CEE276C9C7800E244DA /* check_dnd_status_big_sur.sh in Resources */ = {isa = PBXBuildFile; fileRef = CCCC6CED276C9C7800E244DA /* check_dnd_status_big_sur.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,10 @@
 		50D76E81276B7C07007EF640 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50D76E84276B7C07007EF640 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50D76E86276B7C07007EF640 /* FishUpgrade.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FishUpgrade.entitlements; sourceTree = "<group>"; };
+		CC731224276CA2750088C06F /* FishUpgradeStore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FishUpgradeStore-Info.plist"; sourceTree = "<group>"; };
+		CCCC6CE9276C9C3D00E244DA /* enable_dnd_big_sur.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = enable_dnd_big_sur.sh; sourceTree = "<group>"; };
+		CCCC6CEA276C9C3D00E244DA /* disable_dnd_big_sur.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = disable_dnd_big_sur.sh; sourceTree = "<group>"; };
+		CCCC6CED276C9C7800E244DA /* check_dnd_status_big_sur.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = check_dnd_status_big_sur.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,7 @@
 		50D76E71276B7C06007EF640 = {
 			isa = PBXGroup;
 			children = (
+				CC731224276CA2750088C06F /* FishUpgradeStore-Info.plist */,
 				50D76E7C276B7C06007EF640 /* FishUpgrade */,
 				50D76E7B276B7C06007EF640 /* Products */,
 				0F5DBE33276C55BA0003BDA2 /* Frameworks */,
@@ -100,6 +108,9 @@
 				50D76E86276B7C07007EF640 /* FishUpgrade.entitlements */,
 				0F5DBE2C276C52080003BDA2 /* FishUpgradeStore.entitlements */,
 				0F5DBE2D276C52CD0003BDA2 /* macos-focus-mode.shortcut */,
+				CCCC6CED276C9C7800E244DA /* check_dnd_status_big_sur.sh */,
+				CCCC6CEA276C9C3D00E244DA /* disable_dnd_big_sur.sh */,
+				CCCC6CE9276C9C3D00E244DA /* enable_dnd_big_sur.sh */,
 				50D76E83276B7C07007EF640 /* Preview Content */,
 			);
 			path = FishUpgrade;
@@ -207,9 +218,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCC6CEE276C9C7800E244DA /* check_dnd_status_big_sur.sh in Resources */,
+				CCCC6CEB276C9C3D00E244DA /* enable_dnd_big_sur.sh in Resources */,
 				50D76E85276B7C07007EF640 /* Preview Assets.xcassets in Resources */,
 				0F5DBE2E276C52CD0003BDA2 /* macos-focus-mode.shortcut in Resources */,
 				50D76E82276B7C07007EF640 /* Assets.xcassets in Resources */,
+				CCCC6CEC276C9C3D00E244DA /* disable_dnd_big_sur.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,14 +266,16 @@
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FishUpgradeStore-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fish Upgrade";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Lakr Aream. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -282,14 +298,16 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FishUpgradeStore-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fish Upgrade";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2021 Lakr Aream. All rights reserved.";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -427,7 +445,7 @@
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_NAME)/$(TARGET_NAME).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -457,7 +475,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"FishUpgrade/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;

@@ -80,6 +80,9 @@ enum DoNotDisturb {
         get {
             if #available(macOS 12.0, *) {
                 return false
+            } else if #available(macOS 11.0, *) {
+                let scriptURL = Bundle.main.url(forResource: "check_dnd_status_big_sur", withExtension: "sh")!
+                return AuxiliaryExecute.local.bash(command: "sh \'\(scriptURL.path)\'").stdout.contains("true")
             } else {
                 return CFPreferencesGetAppBooleanValue("doNotDisturb" as CFString, appId, nil)
             }
@@ -90,6 +93,14 @@ enum DoNotDisturb {
                     AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< on", timeout: 3.0)
                 } else {
                     AuxiliaryExecute.local.bash(command: "shortcuts run macos-focus-mode <<< off", timeout: 3.0)
+                }
+            } else if #available(macOS 11.0, *) {
+                if newValue {
+                    let scriptURL = Bundle.main.url(forResource: "enable_dnd_big_sur", withExtension: "sh")!
+                    AuxiliaryExecute.local.bash(command: "sh \'\(scriptURL.path)\'")
+                } else {
+                    let scriptURL = Bundle.main.url(forResource: "disable_dnd_big_sur", withExtension: "sh")!
+                    AuxiliaryExecute.local.bash(command: "sh \'\(scriptURL.path)\'")
                 }
             } else {
                 if newValue {
