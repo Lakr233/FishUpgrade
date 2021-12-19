@@ -115,7 +115,7 @@ struct FishView: View {
         }
         let hour = Int(timeLeft / 3600)
         let min = Int((Int(timeLeft) % 3600) / 60)
-        var str = "剩余时间 "
+        var str = ""
         if hour > 0 {
             str += "\(hour) 小时"
         }
@@ -125,7 +125,10 @@ struct FishView: View {
         if min > 0 {
             str += "\(min) 分钟"
         }
-        return str
+        if str.count < 1 {
+            return ""
+        }
+        return "剩余时间 " + str
     }
 
     func makePercent() -> Double {
